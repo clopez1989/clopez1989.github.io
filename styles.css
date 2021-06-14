@@ -6,6 +6,10 @@
     overflow:hidden;
 }
 
+html{
+  overflow: hidden;
+}
+
 #chart_div {
     position: absolute;
     top: 0;
