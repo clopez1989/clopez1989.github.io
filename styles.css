@@ -1,0 +1,97 @@
+#chart_wrap {
+    position: relative;
+    padding-bottom: 100%;
+    height: 100vh;
+    width: 100vw;
+    overflow:hidden;
+}
+
+#chart_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100vh;
+    width: 100vw;
+    background-image: url(Vital-Signs-Wheel.jpg);
+    background-size: 45vw auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+svg g path:nth-child(2) {
+  stroke-width: 130 !important;
+  fill: rgba(0, 0, 0, 0.1) !important;
+  stroke: rgba(0, 0, 0, 0.1)  !important;
+}
+rect, path, text {
+    fill: rgba(0,0,0,0);
+    stroke: rgba(0,0,0,0);
+}
+a {
+    text-align: center;
+    display: block;
+}
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#mainvideo {
+    display: none;
+}
+
+#mainvideo{
+  margin: auto;
+    text-align: center;
+    background-color: red;
+    width: 100%;
+    top: 10%;
+}
+
+.mobile-version{
+  display: none;
+}
+.desktop-version{
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-version{
+    display: block !important;
+  }
+  .desktop-version{
+    display: none !important;
+  }
+}
